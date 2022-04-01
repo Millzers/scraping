@@ -8,6 +8,7 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import cx_Oracle
 
@@ -35,21 +36,20 @@ def alakazam_10():
     r = requests.get(url)
     soup = BeautifulSoup(r.content, "html5lib")
     num = numOfResults(url)  # find the number of results for the search
-    with open('alakazam_10.csv', 'w', encoding='UTF8', newline='') as f:
-        for i in range(num):  # for the number of "exact" search results, find all titles.
-            title = soup.find_all("h3", class_="lvtitle")[i].text.strip()
-            print(title)
-            price = soup.find_all("li", class_="lvprice prc")[i].text.strip()
-            print(price)
-            numOfBids = soup.find_all("li", class_="lvformat")[i].text.strip()
-            print(numOfBids)
-            # timeLeft = soup.find_all("span", class_="tme")[i].text.strip()
-            # print(timeLeft)
-            image = soup.find_all("img", attrs={"class": "img"})[i]
-            print(
-                image.attrs['src'].strip()
-            )
-    getMarketPrice()
+    for i in range(num):  # for the number of "exact" search results, find all titles.
+        title = soup.find_all("h3", class_="lvtitle")[i].text.strip()
+        print(title)
+        price = soup.find_all("li", class_="lvprice prc")[i].text.strip()
+        print(price)
+        numOfBids = soup.find_all("li", class_="lvformat")[i].text.strip()
+        print(numOfBids)
+        # timeLeft = soup.find_all("span", class_="tme")[i].text.strip()
+        # print(timeLeft)
+        image = soup.find_all("img", attrs={"class": "img"})[i]
+        print(
+            image.attrs['src'].strip()
+        )
+    getMarketPrice(num)
 
 def alakazam_9pt5():
     print("Alakazam 9.5's")
@@ -394,31 +394,21 @@ def numOfResults(url):
     # variable, and parse into an int
     return numOfResults
 
-def getMarketPrice():
+def getMarketPrice(num):
     url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
     driver.get(url)
-    marketPrice = driver.find_elements_by_xpath('//*[@id="itemResults"]/tbody/tr[1]/td[4]')
-    price = []
-    for i in range(len(marketPrice)):
-        price.append(marketPrice[i].text)
-    print(price)
+    price_list = []
+    marketPrice = driver.find_elements(by=By.CLASS_NAME, value="text-right")
+    for results in range(len(marketPrice)):
+        #prices = marketPrice.find_elements(by=By.XPATH, value='//*[@id="itemResults"]/tbody/tr[1]/td[4]')
+        #price_list.append(prices[results].text)
+        print(marketPrice)
+        #print(price_list)
+        #print(1)
 
-
-
-getMarketPrice()
-#def getAuctionPrice(url):
-#    r = requests.get(url)
-#   soup = BeautifulSoup(r.content, "html5lib")
-#    x = soup.find_all("li", class_="lvprice prc")[  # srp-controls__count-heading
-#        0
-#    ].text  # find the number of search results line on the web page and store it in 'x' variable
-#    numOfResults = int(
-#        x.split()[0]
-#    )
-
-#alakazam_10()
+alakazam_10()
 #alakazam_9pt5()
 #alakazam_9()
 #alakazam_8pt5()
