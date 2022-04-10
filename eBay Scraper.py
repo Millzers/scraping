@@ -51,6 +51,7 @@ def alakazam_10():
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
         card_data.extend([image])
+        
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
 
