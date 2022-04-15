@@ -117,7 +117,7 @@ def alakazam_9pt5():
     # psa_file = "psa_alakazam_9pt5.json" # json file name that will contain psa data
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"9.5"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+10%2C+8%2C+7%2C+9%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    # psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10' # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10' # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
@@ -147,7 +147,7 @@ def alakazam_9pt5():
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
-    # psa_results = getMarketPrice(psa_url)
+    psa_results = getMarketPrice(psa_url)
 
     convert_to_json(card_data_list, ebay_file) #convert the list of dictionaries from eBay to a json file
     # convert_to_json(psa_results, psa_file) #convert the list of dictionaries from psa to a json file
