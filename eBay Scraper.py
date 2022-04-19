@@ -49,6 +49,7 @@ def convert_to_json(data, file):
     print(results_read_from_file)
 
 def getMarketPrice(url):
+    i = 0
     driver = webdriver.Chrome(ChromeDriverManager().install())
 
     driver.get(url)
@@ -59,11 +60,12 @@ def getMarketPrice(url):
 
 
     results = []
-
     for row in rows:
-        values = [element.text for element in row.find_elements(by=By.TAG_NAME, value='td')if element.text != '']
-        print(values)
-        results.append(dict(zip(headers, values)))
+        if i < 5:
+            values = [element.text for element in row.find_elements(by=By.TAG_NAME, value='td')if element.text != '']
+            print(values)
+            results.append(dict(zip(headers, values)))
+            i += 1
     print("results = ", results)
     return results
 
@@ -75,7 +77,7 @@ def alakazam_10():
     psa_file = "psa_alakazam_10.json" # json file name that will contain psa data
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"10"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+9%2C+8%2C+7%2C+9.5%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10' # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10' # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
@@ -651,12 +653,12 @@ def charizard_7():
 
 
 alakazam_10()
-alakazam_9pt5()
-alakazam_9()
-alakazam_8pt5()
-alakazam_8()
-alakazam_7pt5()
-alakazam_7()
+#alakazam_9pt5()
+#alakazam_9()
+#alakazam_8pt5()
+#alakazam_8()
+#alakazam_7pt5()
+#alakazam_7()
 #charizard_10()
 #charizard_9pt5()
 #charizard_9()
