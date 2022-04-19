@@ -2,19 +2,16 @@
 # Developed by Logan Miller
 # Last updated 3/1/2022
 # Must pip install bs4 and html5lib to run code
-from time import sleep
 
 import requests
-import csv
 import json
-import re
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 #Problems
-#1. How to get "pokemon" to show up without foreign characters in csv.
+#1. How to get "pokemon" to show up without foreign characters
 #2.
 
 headers = ['Auction URL', 'Auction Title', 'Current Bid Price', 'Number of Bids', 'Time Left on Auction', 'Link to Image of Auction']
@@ -49,6 +46,7 @@ def convert_to_json(data, file):
     print(results_read_from_file)
 
 def getMarketPrice(url):
+    i = 0
     driver = webdriver.Chrome(ChromeDriverManager().install())
 
     driver.get(url)
@@ -59,11 +57,12 @@ def getMarketPrice(url):
 
 
     results = []
-
     for row in rows:
-        values = [element.text for element in row.find_elements(by=By.TAG_NAME, value='td')if element.text != '']
-        print(values)
-        results.append(dict(zip(headers, values)))
+        if i < 5:
+            values = [element.text for element in row.find_elements(by=By.TAG_NAME, value='td')if element.text != '']
+            print(values)
+            results.append(dict(zip(headers, values)))
+            i += 1
     print("results = ", results)
     return results
 
@@ -75,17 +74,19 @@ def alakazam_10():
     psa_file = "psa_alakazam_10.json" # json file name that will contain psa data
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"10"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+9%2C+8%2C+7%2C+9.5%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10' # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10' # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
+        card_data = []  # list to append scraped data to
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -122,12 +123,14 @@ def alakazam_9pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
+        card_data = []  # list to append scraped data to
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -163,12 +166,13 @@ def alakazam_9():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -204,12 +208,13 @@ def alakazam_8pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -245,12 +250,13 @@ def alakazam_8():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -288,12 +294,13 @@ def alakazam_7pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -329,12 +336,12 @@ def alakazam_7():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -349,6 +356,8 @@ def alakazam_7():
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
         card_data.extend([auction_link])
+
+        print(card_data)
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -372,12 +381,13 @@ def charizard_10():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -413,12 +423,13 @@ def charizard_9pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -455,12 +466,13 @@ def charizard_9():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -496,12 +508,13 @@ def charizard_8pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -537,12 +550,13 @@ def charizard_8():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -578,12 +592,13 @@ def charizard_7pt5():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -619,12 +634,13 @@ def charizard_7():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data = [] #list to append scraped data to
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
 
     for card in cards: #Scrape search results for the following data from ebay
+        card_data = []  # list to append scraped data to
+
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
         price = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvprice")][0]
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
@@ -657,9 +673,9 @@ alakazam_8pt5()
 alakazam_8()
 alakazam_7pt5()
 alakazam_7()
-#charizard_10()
-#charizard_9pt5()
-#charizard_9()
-#charizard_8pt5()
-#charizard_8()
+charizard_10()
+charizard_9pt5()
+charizard_9()
+charizard_8pt5()
+charizard_8()
 
