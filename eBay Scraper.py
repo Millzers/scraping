@@ -653,8 +653,8 @@ def charizard_7():
 
 
 alakazam_10()
-#alakazam_9pt5()
-#alakazam_9()
+alakazam_9pt5()
+alakazam_9()
 #alakazam_8pt5()
 #alakazam_8()
 #alakazam_7pt5()
