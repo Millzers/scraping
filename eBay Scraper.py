@@ -15,6 +15,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 #2.
 
 headers = ['Auction URL', 'Auction Title', 'Current Bid Price', 'Number of Bids', 'Time Left on Auction', 'Link to Image of Auction']
+ebay_table_headers = ['Auction Image', 'Auction Title', 'Current Bid Price', 'Number of Bids', 'Time Left on Auction']
+psa_table_headers = []
 
 
 # This function finds the number of "exact" search results on the eBay page. eBay shows a number of additional search
@@ -83,7 +85,7 @@ def alakazam_10():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
-    card_data_list.append(dict(zip(headers, headers)))  # join the headers[] list with the card_data we just scraped #####################################################
+    card_data_list.append(dict(zip(headers, table_headers)))  # join the headers[] list with the card_data we just scraped #####################################################
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
 
