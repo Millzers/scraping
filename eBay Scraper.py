@@ -93,16 +93,16 @@ def alakazam_10():
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
         time_left = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="tme")][0]
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
-        image_in_html = ('<a href='+image+'><img src="https://i.ebayimg.com/thumbs/images/g/rbwAAOSwUF5iW2XX/s-l225.jpg" alt="HTML tutorial" style="width:148px;height:225px;"></a>')
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
 
         # extend data to the card_data list
-        card_data.extend([image_in_html])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+        #card_data.extend([html_auction_link])
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
