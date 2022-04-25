@@ -83,7 +83,7 @@ def alakazam_10():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
-
+    card_data_list.append(dict(zip(headers, headers)))  # join the headers[] list with the card_data we just scraped #####################################################
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
 
@@ -94,7 +94,7 @@ def alakazam_10():
         time_left = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="tme")][0]
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
-        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>') ########################################################
 
         # extend data to the card_data list
         card_data.extend([html_image])
@@ -112,7 +112,6 @@ def alakazam_10():
 
     convert_to_json(card_data_list, ebay_file) #convert the list of dictionaries from eBay to a json file
     convert_to_json(psa_results, psa_file) #convert the list of dictionaries from psa to a json file
-
 
 def alakazam_9pt5():
     print("Alakazam 9.5's")
