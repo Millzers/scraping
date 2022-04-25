@@ -73,7 +73,8 @@ def alakazam_10():
     ebay_file = "ebay_alakazam_10.json" # json file name that will contain eBay data
     psa_file = "psa_alakazam_10.json" # json file name that will contain psa data
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"10"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+9%2C+8%2C+7%2C+9.5%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    #### TEST URL #####
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"7"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10' # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
@@ -92,10 +93,11 @@ def alakazam_10():
         number_of_bids = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvformat")][0]
         time_left = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="tme")][0]
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
+        image_in_html = ('<a href='+image+'><img src="https://i.ebayimg.com/thumbs/images/g/rbwAAOSwUF5iW2XX/s-l225.jpg" alt="HTML tutorial" style="width:148px;height:225px;"></a>')
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([image_in_html])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
@@ -667,15 +669,15 @@ def charizard_7():
 
 
 alakazam_10()
-alakazam_9pt5()
-alakazam_9()
-alakazam_8pt5()
-alakazam_8()
-alakazam_7pt5()
-alakazam_7()
-charizard_10()
-charizard_9pt5()
-charizard_9()
-charizard_8pt5()
-charizard_8()
+#alakazam_9pt5()
+#alakazam_9()
+#alakazam_8pt5()
+#alakazam_8()
+#alakazam_7pt5()
+#alakazam_7()
+#charizard_10()
+#charizard_9pt5()
+#charizard_9()
+#charizard_8pt5()
+#charizard_8()
 
