@@ -68,6 +68,15 @@ def getMarketPrice(url):
     print("results = ", results)
     return results
 
+def html_format(card_data, card_data_list, title, price, number_of_bids, time_left, auction_link, image):
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))
+    html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+    card_data.extend([html_image])
+    card_data.extend([title])
+    card_data.extend([price])
+    card_data.extend([number_of_bids])
+    card_data.extend([time_left])
+
 ############################################### SCRAPING ALAKAZAM ######################################################
 
 def alakazam_10():
@@ -82,12 +91,12 @@ def alakazam_10():
     driver = webdriver.Chrome(ChromeDriverManager().install()) #open up a chrome application for selenium to use
     driver.get(url) #give the target url to the driver
 
-    card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
+    card_data_list = [] #list that will contain the dictionaries of card data after they are zipped
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
-    card_data_list.append(dict(zip(headers, table_headers)))  # join the headers[] list with the card_data we just scraped #####################################################
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
+
     for card in cards: #Scrape search results for the following data from ebay
-        card_data = []  # list to append scraped data to
 
         card_data = []  # list to append scraped data to
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
@@ -96,7 +105,9 @@ def alakazam_10():
         time_left = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="tme")][0]
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
-        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>') ########################################################
+
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
 
         # extend data to the card_data list
         card_data.extend([html_image])
@@ -104,8 +115,6 @@ def alakazam_10():
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        #card_data.extend([html_auction_link])
-
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
 
@@ -118,7 +127,7 @@ def alakazam_10():
 def alakazam_9pt5():
     print("Alakazam 9.5's")
     ebay_file = "ebay_alakazam_9pt5.json" # json file name that will contain eBay data
-    # psa_file = "psa_alakazam_9pt5.json" # json file name that will contain psa data
+    psa_file = "psa_alakazam_9pt5.json" # json file name that will contain psa data
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"9.5"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+10%2C+8%2C+7%2C+9%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10' # url for PSA website
@@ -129,9 +138,9 @@ def alakazam_9pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
-        card_data = []  # list to append scraped data to
 
         card_data = []  # list to append scraped data to
         title = [element.text for element in card.find_elements(by=By.CLASS_NAME, value="lvtitle")][0]
@@ -141,13 +150,16 @@ def alakazam_9pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -156,7 +168,7 @@ def alakazam_9pt5():
     psa_results = getMarketPrice(psa_url)
 
     convert_to_json(card_data_list, ebay_file) #convert the list of dictionaries from eBay to a json file
-    # convert_to_json(psa_results, psa_file) #convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file) #convert the list of dictionaries from psa to a json file
 
 def alakazam_9():
     print("Alakazam 9's")
@@ -172,6 +184,7 @@ def alakazam_9():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -183,13 +196,16 @@ def alakazam_9():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -214,6 +230,7 @@ def alakazam_8pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -225,13 +242,16 @@ def alakazam_8pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -256,6 +276,7 @@ def alakazam_8():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -267,13 +288,16 @@ def alakazam_8():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -300,6 +324,7 @@ def alakazam_7pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -311,13 +336,16 @@ def alakazam_7pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -342,6 +370,7 @@ def alakazam_7():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -352,13 +381,16 @@ def alakazam_7():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
         print(card_data)
 
@@ -387,6 +419,7 @@ def charizard_10():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -398,13 +431,16 @@ def charizard_10():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -429,6 +465,7 @@ def charizard_9pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -440,13 +477,16 @@ def charizard_9pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -472,6 +512,7 @@ def charizard_9():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -483,13 +524,16 @@ def charizard_9():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -514,6 +558,7 @@ def charizard_8pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -525,13 +570,16 @@ def charizard_8pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -556,6 +604,7 @@ def charizard_8():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -567,13 +616,16 @@ def charizard_8():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -598,6 +650,7 @@ def charizard_7pt5():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -609,13 +662,16 @@ def charizard_7pt5():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -640,6 +696,7 @@ def charizard_7():
     card_data_list = [] #dictionary that will be zipped with card_data[] list & headers[] list
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult") #scrape the search results of an ebay search
+    card_data_list.append(dict(zip(headers, ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
 
     for card in cards: #Scrape search results for the following data from ebay
         card_data = []  # list to append scraped data to
@@ -651,13 +708,16 @@ def charizard_7():
         image = [element.get_attribute("src") for element in card.find_elements(by=By.TAG_NAME, value="img")][0]
         auction_link = [element.get_attribute("href") for element in card.find_elements(By.CSS_SELECTOR, "h3.lvtitle > a[href]")][0]
 
+        # write the auction link and image link into an html line of code to use on the website in order to populate the first column with an image
+        html_image = ('<a href=' + auction_link + '><img src=' + image + ' alt="HTML tutorial" style="width:148px;height:225px;"></a>')
+
         # extend data to the card_data list
-        card_data.extend([image])
+        card_data.extend([html_image])
         card_data.extend([title])
         card_data.extend([price])
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
-        card_data.extend([auction_link])
+
 
 
         card_data_list.append(dict(zip(headers, card_data))) #join the headers[] list with the card_data we just scraped
@@ -670,12 +730,12 @@ def charizard_7():
 
 
 alakazam_10()
-#alakazam_9pt5()
-#alakazam_9()
-#alakazam_8pt5()
-#alakazam_8()
-#alakazam_7pt5()
-#alakazam_7()
+alakazam_9pt5()
+alakazam_9()
+alakazam_8pt5()
+alakazam_8()
+alakazam_7pt5()
+alakazam_7()
 #charizard_10()
 #charizard_9pt5()
 #charizard_9()

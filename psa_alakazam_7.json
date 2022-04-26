@@ -6,7 +6,8 @@
     "LOT #": "264219130361",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "jrrinehuls",
-    "TYPE": "Auction"
+    "TYPE": "Auction",
+    "CERT": "24732318"
   },
   {
     "DATE": "8/29/2018",
@@ -15,7 +16,8 @@
     "LOT #": "142910572213",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "pwcc_auctions",
-    "TYPE": "Auction"
+    "TYPE": "Auction",
+    "CERT": "41456048"
   },
   {
     "DATE": "8/7/2018",
@@ -24,7 +26,8 @@
     "LOT #": "273381933049",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "numismaticsgmc",
-    "TYPE": "Auction"
+    "TYPE": "Auction",
+    "CERT": "29002228"
   },
   {
     "DATE": "5/31/2018",
@@ -33,7 +36,8 @@
     "LOT #": "173336862789",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "the_charizard_master",
-    "TYPE": "Auction"
+    "TYPE": "Auction",
+    "CERT": "40806559"
   },
   {
     "DATE": "5/6/2018",
@@ -42,6 +46,7 @@
     "LOT #": "132600514256",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "sgpokecollect",
-    "TYPE": "Best Offer"
+    "TYPE": "Best Offer",
+    "CERT": "26561811"
   }
 ]
