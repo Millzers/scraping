@@ -1,7 +1,6 @@
 # scraping
 # Developed by Logan Miller
-# Last updated 3/1/2022
-# Must pip install bs4 and html5lib to run code
+# Last updated 5/1/2022
 
 import requests
 import json
@@ -17,23 +16,24 @@ from webdriver_manager.chrome import ChromeDriverManager
 headers = ['Auction URL', 'Auction Title', 'Current Bid Price', 'Number of Bids', 'Time Left on Auction',
            'Link to Image of Auction']
 ebay_table_headers = ['Auction Image', 'Auction Title', 'Current Bid Price', 'Number of Bids', 'Time Left on Auction']
-psa_table_headers = []
+psa_table_headers = ['Date', 'Price', 'Grade', 'Lot #', 'Auction House', 'Seller', 'Type', 'Cert']
+psa_table_header_keys = ['header1', 'header2', 'header3', 'header4', 'header5', 'header6']
 
 
 # This function finds the number of "exact" search results on the eBay page. eBay shows a number of additional search
 # results that are similar to what you searched for underneath the actual search results. We use the resulting number
 # of this function and plug it into the scraper to only gather the first X results.
-def numOfResults(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.content, "html5lib")
-    x = soup.find_all("h1", class_="rsHdr")[  # srp-controls__count-heading // tag for regular search page
-        0
-    ].text  # find the number of search results line on the web page and store it in 'x' variable
-    numOfResults = int(
-        x.split()[0]
-    )  # read the first word(actually an integer) from the number of search results string into the 'numOfResults'
-    # variable, and parse into an int
-    return numOfResults
+# def numOfResults(url):
+#     r = requests.get(url)
+#     soup = BeautifulSoup(r.content, "html5lib")
+#     x = soup.find_all("h1", class_="rsHdr")[  # srp-controls__count-heading // tag for regular search page
+#         0
+#     ].text  # find the number of search results line on the web page and store it in 'x' variable
+#     numOfResults = int(
+#         x.split()[0]
+#     )  # read the first word(actually an integer) from the number of search results string into the 'numOfResults'
+#     # variable, and parse into an int
+#     return numOfResults
 
 
 def convert_to_json(data, file):
@@ -50,7 +50,7 @@ def convert_to_json(data, file):
     print(results_read_from_file)
 
 
-def getMarketPrice(url):
+def getMarketPrice(url):  # scrape psa website for the table
     i = 0
     driver = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -61,6 +61,7 @@ def getMarketPrice(url):
     rows = table.find_elements(by=By.TAG_NAME, value='tbody')[0].find_elements(by=By.TAG_NAME, value='tr')
 
     results = []
+    results.append(dict(zip(psa_table_headers, psa_table_headers)))
     for row in rows:
         if i < 5:
             values = [element.text for element in row.find_elements(by=By.TAG_NAME, value='td') if element.text != '']
@@ -84,15 +85,17 @@ def html_format(card_data, card_data_list, title, price, number_of_bids, time_le
 
 def get_prices(file):
     prices = 0
+    i = 0 #iterator
     # open the .json file that contains the PSA data for the card.
     with open(file, 'r') as json_file:
         json_load = json.load(json_file)
 
-    for x in json_load:  # for every dictionary in json_load
-        prices += float(x['PRICE'].lstrip("$"))  # get the values with the 'PRICES' key
+    for x in json_load[1:]: # for every dictionary in json_load
+        prices += float(x['PRICE'].lstrip("$").replace(',',''))  # get the values with the 'PRICES' key
 
-    most_recent = json_load[0]  # get the most recent sale
-    fresh_price = float(most_recent['PRICE'].lstrip("$"))  # get the price for the most recent sale
+
+    most_recent = json_load[1]  # get the most recent sale
+    fresh_price = float(most_recent['PRICE'].lstrip("$").replace(',',''))  # get the price for the most recent sale
     avg_price = (prices + fresh_price) / 6  # get the average price. Most recent sale is included twice in the formula.
     fair_price = "${:,.2f}".format(avg_price * .95)  # 95% of the average price is a fair price.
     good_price = "${:,.2f}".format(avg_price * .85)  # 85% of the average price is a good price.
@@ -123,7 +126,8 @@ def alakazam_10():
 
     cards = driver.find_elements(by=By.CLASS_NAME, value="sresult")  # scrape the search results of an ebay search
     card_data_list.append(dict(zip(headers,
-                                   ebay_table_headers)))  # input the headers we want listed as the first row (header row) on the website
+                                   ebay_table_headers)))  # input the headers we want listed as the first row (header row) for eBay tables
+
 
     for card in cards:  # Scrape search results for the following data from ebay
 
@@ -148,26 +152,23 @@ def alakazam_10():
         card_data.extend([number_of_bids])
         card_data.extend([time_left])
 
-        card_data_list.append(
-            dict(zip(headers, card_data)))  # join the headers[] list with the card_data we just scraped
+        card_data_list.append(dict(zip(headers, card_data)))  # join the headers[] list with the card_data we just scraped
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-    price_results = get_prices(psa_file)  ############################################
-    print(price_results)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
     convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
-    convert_to_json(price_results, price_file)  ############################################
-
+    price_results = get_prices(psa_file)  # get_prices() takes the prices from the psa files and manipulates them.
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 def alakazam_9pt5():
     print("Alakazam 9.5's")
     ebay_file = "ebay_alakazam_9pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_9pt5.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_9pt5.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"9.5"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+10%2C+8%2C+7%2C+9%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -205,18 +206,21 @@ def alakazam_9pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def alakazam_9():
     print("Alakazam 9's")
     ebay_file = "ebay_alakazam_9.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_9.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_9.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"9"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+10%2C+8%2C+7%2C+9.5%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -254,18 +258,21 @@ def alakazam_9():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def alakazam_8pt5():
     print("Alakazam 8.5's")
     ebay_file = "ebay_alakazam_8pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_8pt5.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_8pt5.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"10"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C+9%2C+8%2C+7%2C+9.5%2C+8.5%2C+7.5&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=8.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -303,18 +310,21 @@ def alakazam_8pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def alakazam_8():
     print("Alakazam 8's")
     ebay_file = "ebay_alakazam_8.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_8.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_8.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"++"8"&_in_kw=1&_ex_kw=10+celebrations+9+9.5+8.5+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=8'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -352,18 +362,21 @@ def alakazam_8():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def alakazam_7pt5():
     print("Alakazam 7.5's")
     ebay_file = "ebay_alakazam_7pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_7pt5.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_7pt5.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"++"7.5"&_in_kw=1&_ex_kw=10+celebrations+9+9.5+8.5+8+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=7.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -401,18 +414,21 @@ def alakazam_7pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def alakazam_7():
     print("Alakazam 7's")
     ebay_file = "ebay_alakazam_7.json"  # json file name that will contain eBay data
     psa_file = "psa_alakazam_7.json"  # json file name that will contain psa data
+    price_file = 'prices_alakazam_7.json'
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"++"7"&_in_kw=1&_ex_kw=10+celebrations+9+9.5+8.5+8+7.5+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
-    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
+    psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=7'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
     driver.get(url)  # give the target url to the driver
@@ -451,9 +467,11 @@ def alakazam_7():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 ############################################### SCRAPING CHARIZARD #####################################################
@@ -462,6 +480,7 @@ def charizard_10():
     print("Charizard 10's")
     ebay_file = "ebay_charizard_10.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_10.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+9+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -502,15 +521,18 @@ def charizard_10():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_9pt5():
     print("Charizard 9.5's")
     ebay_file = "ebay_charizard_9pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_9pt5.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+9+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -551,15 +573,18 @@ def charizard_9pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_9():
     print("Charizard 9's")
     ebay_file = "ebay_charizard_9.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_9.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+9.5+10+8.5+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -600,15 +625,18 @@ def charizard_9():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_8pt5():
     print("Charizard 8.5's")
     ebay_file = "ebay_charizard_8pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_8pt5.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -649,15 +677,18 @@ def charizard_8pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_8():
     print("Charizard 8's")
     ebay_file = "ebay_charizard_8.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_8.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+9.5+10+9+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -698,15 +729,18 @@ def charizard_8():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_7pt5():
     print("Charizard 7.5's")
     ebay_file = "ebay_charizard_7pt5.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_7pt5.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -747,15 +781,18 @@ def charizard_7pt5():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 def charizard_7():
     print("Charizard 7's")
     ebay_file = "ebay_charizard_7.json"  # json file name that will contain eBay data
     psa_file = "psa_charizard_7.json"  # json file name that will contain psa data
+    price_file = ''
     # url for eBay auction
     url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="charizard"+"4%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/702171#g=10'  # url for PSA website
@@ -796,9 +833,11 @@ def charizard_7():
 
     # call getMarketPrice function which scrapes the PSA website. Return results to psa_results
     psa_results = getMarketPrice(psa_url)
-
     convert_to_json(card_data_list, ebay_file)  # convert the list of dictionaries from eBay to a json file
-    convert_to_json(psa_results, psa_file)  # convert the list of dictionaries from psa to a json file
+    convert_to_json(psa_results, psa_file)
+    price_results = get_prices(psa_file) # get_prices() takes the prices from the psa files and manipulates them.
+    # convert the list of dictionaries from psa to a json file
+    convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
 alakazam_10()

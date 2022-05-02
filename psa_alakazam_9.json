@@ -1,52 +1,62 @@
 [
   {
-    "DATE": "3/10/2019",
-    "PRICE": "$1,136.00",
-    "GRADE": "10",
-    "LOT #": "264219130361",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "jrrinehuls",
-    "TYPE": "Auction",
-    "CERT": "24732318"
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
   },
   {
-    "DATE": "8/29/2018",
-    "PRICE": "$1,526.01",
+    "DATE": "2/5/2022",
+    "PRICE": "$502.00",
     "GRADE": "10",
-    "LOT #": "142910572213",
+    "LOT #": "304337451195",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "pwcc_auctions",
+    "AUCTION/SELLER": "jla23860",
     "TYPE": "Auction",
-    "CERT": "41456048"
+    "CERT": "23380100"
   },
   {
-    "DATE": "8/7/2018",
-    "PRICE": "$1,211.00",
+    "DATE": "1/23/2022",
+    "PRICE": "$610.00",
     "GRADE": "10",
-    "LOT #": "273381933049",
+    "LOT #": "185260615562",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "numismaticsgmc",
+    "AUCTION/SELLER": "cwclevenger",
     "TYPE": "Auction",
-    "CERT": "29002228"
+    "CERT": "48778251"
   },
   {
-    "DATE": "5/31/2018",
-    "PRICE": "$1,726.02",
+    "DATE": "12/16/2021",
+    "PRICE": "$619.00",
     "GRADE": "10",
-    "LOT #": "173336862789",
+    "LOT #": "234324780812",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "the_charizard_master",
+    "AUCTION/SELLER": "des1728",
     "TYPE": "Auction",
-    "CERT": "40806559"
+    "CERT": "48238348"
   },
   {
-    "DATE": "5/6/2018",
-    "PRICE": "$2,250.00",
+    "DATE": "11/1/2021",
+    "PRICE": "$340.00",
     "GRADE": "10",
-    "LOT #": "132600514256",
+    "LOT #": "384456995074",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "sgpokecollect",
-    "TYPE": "Best Offer",
-    "CERT": "26561811"
+    "AUCTION/SELLER": "4_sharp_corners",
+    "TYPE": "Auction",
+    "CERT": "20552815"
+  },
+  {
+    "DATE": "9/14/2021",
+    "PRICE": "$760.00",
+    "GRADE": "10",
+    "LOT #": "384376754999",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "48565611"
   }
 ]

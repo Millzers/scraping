@@ -1,52 +1,22 @@
 [
   {
-    "DATE": "3/10/2019",
-    "PRICE": "$1,136.00",
-    "GRADE": "10",
-    "LOT #": "264219130361",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "jrrinehuls",
-    "TYPE": "Auction",
-    "CERT": "24732318"
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
   },
   {
-    "DATE": "8/29/2018",
-    "PRICE": "$1,526.01",
-    "GRADE": "10",
-    "LOT #": "142910572213",
+    "DATE": "4/16/2021",
+    "PRICE": "$96.00",
+    "GRADE": "7.5",
+    "LOT #": "133720586284",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "pwcc_auctions",
+    "AUCTION/SELLER": "dggamer",
     "TYPE": "Auction",
-    "CERT": "41456048"
-  },
-  {
-    "DATE": "8/7/2018",
-    "PRICE": "$1,211.00",
-    "GRADE": "10",
-    "LOT #": "273381933049",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "numismaticsgmc",
-    "TYPE": "Auction",
-    "CERT": "29002228"
-  },
-  {
-    "DATE": "5/31/2018",
-    "PRICE": "$1,726.02",
-    "GRADE": "10",
-    "LOT #": "173336862789",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "the_charizard_master",
-    "TYPE": "Auction",
-    "CERT": "40806559"
-  },
-  {
-    "DATE": "5/6/2018",
-    "PRICE": "$2,250.00",
-    "GRADE": "10",
-    "LOT #": "132600514256",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "sgpokecollect",
-    "TYPE": "Best Offer",
-    "CERT": "26561811"
+    "CERT": "48786401"
   }
 ]

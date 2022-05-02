@@ -1,52 +1,62 @@
 [
   {
-    "DATE": "3/10/2019",
-    "PRICE": "$1,136.00",
-    "GRADE": "10",
-    "LOT #": "264219130361",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "jrrinehuls",
-    "TYPE": "Auction",
-    "CERT": "24732318"
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
   },
   {
-    "DATE": "8/29/2018",
-    "PRICE": "$1,526.01",
-    "GRADE": "10",
-    "LOT #": "142910572213",
+    "DATE": "12/12/2021",
+    "PRICE": "$103.68",
+    "GRADE": "8.5",
+    "LOT #": "265436833910",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jackmovs",
+    "TYPE": "Auction",
+    "CERT": "54465276"
+  },
+  {
+    "DATE": "6/23/2021",
+    "PRICE": "$53.00",
+    "GRADE": "8.5",
+    "LOT #": "373616474092",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "sportcardauctionscom",
+    "TYPE": "Auction",
+    "CERT": "53129664"
+  },
+  {
+    "DATE": "4/27/2021",
+    "PRICE": "$88.00",
+    "GRADE": "8.5",
+    "LOT #": "144011116392",
     "AUCTION HOUSE": "eBay",
     "AUCTION/SELLER": "pwcc_auctions",
     "TYPE": "Auction",
-    "CERT": "41456048"
+    "CERT": "47394425"
   },
   {
-    "DATE": "8/7/2018",
-    "PRICE": "$1,211.00",
-    "GRADE": "10",
-    "LOT #": "273381933049",
+    "DATE": "4/26/2021",
+    "PRICE": "$79.00",
+    "GRADE": "8.5",
+    "LOT #": "124687380938",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "numismaticsgmc",
+    "AUCTION/SELLER": "daimyogaming",
     "TYPE": "Auction",
-    "CERT": "29002228"
+    "CERT": "49490828"
   },
   {
-    "DATE": "5/31/2018",
-    "PRICE": "$1,726.02",
-    "GRADE": "10",
-    "LOT #": "173336862789",
+    "DATE": "4/6/2021",
+    "PRICE": "$190.00",
+    "GRADE": "8.5",
+    "LOT #": "294079562861",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "the_charizard_master",
-    "TYPE": "Auction",
-    "CERT": "40806559"
-  },
-  {
-    "DATE": "5/6/2018",
-    "PRICE": "$2,250.00",
-    "GRADE": "10",
-    "LOT #": "132600514256",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "sgpokecollect",
+    "AUCTION/SELLER": "ryemasta",
     "TYPE": "Best Offer",
-    "CERT": "26561811"
+    "CERT": "47519464"
   }
 ]
