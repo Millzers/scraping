@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "6/23/2021",
+    "PRICE": "$102.50",
+    "GRADE": "7.5",
+    "LOT #": "203495311461",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "sportcardauctionscom",
+    "TYPE": "Auction",
+    "CERT": "53129655"
+  },
+  {
+    "DATE": "1/4/2021",
+    "PRICE": "$330.00",
+    "GRADE": "7.5",
+    "LOT #": "274627955520",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "blueblazer90",
+    "TYPE": "Auction",
+    "CERT": "51553256"
+  },
+  {
+    "DATE": "11/26/2020",
+    "PRICE": "$205.50",
+    "GRADE": "7.5",
+    "LOT #": "402557588357",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "48162751"
+  },
+  {
+    "DATE": "9/9/2020",
+    "PRICE": "$300.00",
+    "GRADE": "7.5",
+    "LOT #": "283967690851",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "sneakergame.sg",
+    "TYPE": "Best Offer",
+    "CERT": "47364162"
+  },
+  {
+    "DATE": "9/3/2020",
+    "PRICE": "$102.50",
+    "GRADE": "7.5",
+    "LOT #": "133501721954",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "youwho_24",
+    "TYPE": "Auction",
+    "CERT": "48162751"
+  }
+]

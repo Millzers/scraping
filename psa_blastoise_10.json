@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/19/2022",
+    "PRICE": "$3,050.00",
+    "GRADE": "10",
+    "LOT #": "373878942225",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "acetsuu",
+    "TYPE": "Auction",
+    "CERT": "27612876"
+  },
+  {
+    "DATE": "11/15/2021",
+    "PRICE": "$3,150.00",
+    "GRADE": "10",
+    "LOT #": "393694393785",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "kaflo-2383",
+    "TYPE": "Auction",
+    "CERT": "63408658"
+  },
+  {
+    "DATE": "11/8/2021",
+    "PRICE": "$2,705.00",
+    "GRADE": "10",
+    "LOT #": "144271170471",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "davy_auctions",
+    "TYPE": "Auction",
+    "CERT": "27262286"
+  },
+  {
+    "DATE": "11/8/2021",
+    "PRICE": "$3,095.00",
+    "GRADE": "10",
+    "LOT #": "324859385330",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dnbliquidations",
+    "TYPE": "Auction",
+    "CERT": "52719392"
+  },
+  {
+    "DATE": "11/4/2021",
+    "PRICE": "$3,150.00",
+    "GRADE": "10",
+    "LOT #": "174998549866",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "easysense",
+    "TYPE": "Auction",
+    "CERT": "27296918"
+  }
+]

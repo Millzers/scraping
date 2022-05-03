@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/27/2022",
+    "PRICE": "$170.50",
+    "GRADE": "8.5",
+    "LOT #": "144379126608",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "money-bridge",
+    "TYPE": "Auction",
+    "CERT": "47691363"
+  },
+  {
+    "DATE": "12/27/2021",
+    "PRICE": "$180.00",
+    "GRADE": "8.5",
+    "LOT #": "284575487585",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "johndac-2",
+    "TYPE": "Auction",
+    "CERT": "53033233"
+  },
+  {
+    "DATE": "9/24/2021",
+    "PRICE": "$302.38",
+    "GRADE": "8.5",
+    "LOT #": "284455320467",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "adhollway123",
+    "TYPE": "Auction",
+    "CERT": "54461275"
+  },
+  {
+    "DATE": "8/25/2021",
+    "PRICE": "$250.00",
+    "GRADE": "8.5",
+    "LOT #": "255097861331",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokepdx",
+    "TYPE": "Auction",
+    "CERT": "51591554"
+  },
+  {
+    "DATE": "8/18/2021",
+    "PRICE": "$275.00",
+    "GRADE": "8.5",
+    "LOT #": "284411395028",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cardhouse_eu",
+    "TYPE": "Auction",
+    "CERT": "47217006"
+  }
+]

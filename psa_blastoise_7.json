@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/6/2022",
+    "PRICE": "$132.50",
+    "GRADE": "7",
+    "LOT #": "265521070955",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "top_shelf_incorporated",
+    "TYPE": "Auction",
+    "CERT": "56477288"
+  },
+  {
+    "DATE": "1/28/2022",
+    "PRICE": "$117.00",
+    "GRADE": "7",
+    "LOT #": "125112486343",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "itsalhill",
+    "TYPE": "Auction",
+    "CERT": "54436577"
+  },
+  {
+    "DATE": "1/28/2022",
+    "PRICE": "$107.50",
+    "GRADE": "7",
+    "LOT #": "125112491086",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "itsalhill",
+    "TYPE": "Auction",
+    "CERT": "54436577"
+  },
+  {
+    "DATE": "1/28/2022",
+    "PRICE": "$180.00",
+    "GRADE": "7",
+    "LOT #": "313838470566",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "m3ryder55",
+    "TYPE": "Auction",
+    "CERT": "63569333"
+  },
+  {
+    "DATE": "1/24/2022",
+    "PRICE": "$145.27",
+    "GRADE": "7",
+    "LOT #": "284618920732",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cardhouse_eu",
+    "TYPE": "Auction",
+    "CERT": "47216995"
+  }
+]
