@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "6/12/2021",
+    "PRICE": "$70.00",
+    "GRADE": "8.5",
+    "LOT #": "353526091280",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "poke-papa",
+    "TYPE": "Auction",
+    "CERT": "48352885"
+  },
+  {
+    "DATE": "3/8/2021",
+    "PRICE": "$102.50",
+    "GRADE": "8.5",
+    "LOT #": "265074149836",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "little_jerry00",
+    "TYPE": "Auction",
+    "CERT": "46910962"
+  },
+  {
+    "DATE": "3/2/2020",
+    "PRICE": "$11.50",
+    "GRADE": "8.5",
+    "LOT #": "383435602167",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "45285053"
+  },
+  {
+    "DATE": "1/20/2020",
+    "PRICE": "$27.00",
+    "GRADE": "8.5",
+    "LOT #": "383365074958",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "44443695"
+  },
+  {
+    "DATE": "7/3/2019",
+    "PRICE": "$18.00",
+    "GRADE": "8.5",
+    "LOT #": "153466519226",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "joeyscott210",
+    "TYPE": "Best Offer",
+    "CERT": "42416896"
+  }
+]

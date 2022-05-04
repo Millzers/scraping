@@ -1,0 +1,22 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "6/6/2017",
+    "PRICE": "$10.00",
+    "GRADE": "7.5",
+    "LOT #": "302269754727",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jskelic",
+    "TYPE": "Buy It Now",
+    "CERT": "26639169"
+  }
+]

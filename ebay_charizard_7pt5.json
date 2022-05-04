@@ -1,0 +1,30 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/154975004554?hash=item24153ae78a:g:CPsAAOSwai5hXnv6><img src=https://i.ebayimg.com/thumbs/images/g/CPsAAOSwai5hXnv6/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 POKEMON BASE UNLIMITED HOLO CHARIZARD 4/102 HGA7.5 NM+ RARE ONE OF A KIND",
+    "Current Bid Price": "$325.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "5d 1h left (Sunday, 11PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/284795263772?hash=item424f1edb1c:g:rk0AAOSwg3hhkeRw><img src=https://i.ebayimg.com/thumbs/images/g/rk0AAOSwg3hhkeRw/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pokemon Base Set Charizard CGC 7.5 4/102 Holo PSA BGS with Subgrades",
+    "Current Bid Price": "$385.00",
+    "Number of Bids": "0 bids\nor Best Offer",
+    "Time Left on Auction": "5d 1h left (Sunday, 10PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/363826287989?hash=item54b5bc9575:g:pjUAAOSwdb1iX2rN><img src=https://i.ebayimg.com/thumbs/images/g/pjUAAOSwdb1iX2rN/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "NEW LISTING 1999 Pok\u00e9mon Base Set Charizard Holo 4/102 Unlimited Rare CGC 7.5 Near Mint+",
+    "Current Bid Price": "$1,050.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "6d 23h left (Tuesday, 9PM)"
+  }
+]

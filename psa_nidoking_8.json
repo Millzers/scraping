@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "3/22/2022",
+    "PRICE": "$30.02",
+    "GRADE": "8",
+    "LOT #": "384780681477",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55298691"
+  },
+  {
+    "DATE": "3/15/2022",
+    "PRICE": "$38.00",
+    "GRADE": "8",
+    "LOT #": "363755239655",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55298709"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$33.00",
+    "GRADE": "8",
+    "LOT #": "363732379830",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242706"
+  },
+  {
+    "DATE": "2/15/2022",
+    "PRICE": "$42.69",
+    "GRADE": "8",
+    "LOT #": "313868851492",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pok3-mart",
+    "TYPE": "Auction",
+    "CERT": "53120859"
+  },
+  {
+    "DATE": "2/13/2022",
+    "PRICE": "$47.00",
+    "GRADE": "8",
+    "LOT #": "284645234379",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "2b1g_cards_games",
+    "TYPE": "Auction",
+    "CERT": "54585004"
+  }
+]

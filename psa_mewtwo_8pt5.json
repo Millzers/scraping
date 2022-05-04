@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "5/29/2021",
+    "PRICE": "$77.00",
+    "GRADE": "8.5",
+    "LOT #": "402854674167",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "48366785"
+  },
+  {
+    "DATE": "4/7/2021",
+    "PRICE": "$174.51",
+    "GRADE": "8.5",
+    "LOT #": "324537672431",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "416.rare.cards",
+    "TYPE": "Best Offer",
+    "CERT": "47632447"
+  },
+  {
+    "DATE": "4/4/2021",
+    "PRICE": "$170.00",
+    "GRADE": "8.5",
+    "LOT #": "143982691468",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tcggalaxy",
+    "TYPE": "Best Offer",
+    "CERT": "48633016"
+  },
+  {
+    "DATE": "3/13/2021",
+    "PRICE": "$122.00",
+    "GRADE": "8.5",
+    "LOT #": "363316414705",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jtemp.96",
+    "TYPE": "Auction",
+    "CERT": "54055097"
+  },
+  {
+    "DATE": "11/29/2020",
+    "PRICE": "$102.50",
+    "GRADE": "8.5",
+    "LOT #": "233791564843",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "vtgsource911",
+    "TYPE": "Auction",
+    "CERT": "47978244"
+  }
+]

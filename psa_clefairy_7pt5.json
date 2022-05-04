@@ -1,0 +1,22 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/24/2022",
+    "PRICE": "$15.00",
+    "GRADE": "7.5",
+    "LOT #": "133992539572",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "fat-chocobo",
+    "TYPE": "Auction",
+    "CERT": "49531930"
+  }
+]

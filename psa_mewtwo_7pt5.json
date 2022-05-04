@@ -1,0 +1,42 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "4/27/2021",
+    "PRICE": "$91.01",
+    "GRADE": "7.5",
+    "LOT #": "144011123563",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "52909238"
+  },
+  {
+    "DATE": "3/3/2021",
+    "PRICE": "$95.00",
+    "GRADE": "7.5",
+    "LOT #": "114605891933",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "acurrie32",
+    "TYPE": "Best Offer",
+    "CERT": "51914878"
+  },
+  {
+    "DATE": "12/24/2020",
+    "PRICE": "$100.00",
+    "GRADE": "7.5",
+    "LOT #": "164587078787",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "stefra-9435",
+    "TYPE": "Auction",
+    "CERT": "50857738"
+  }
+]

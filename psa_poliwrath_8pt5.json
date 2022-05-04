@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "6/9/2021",
+    "PRICE": "$55.00",
+    "GRADE": "8.5",
+    "LOT #": "402893551059",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "ch_collectibles",
+    "TYPE": "Auction",
+    "CERT": "47887012"
+  },
+  {
+    "DATE": "5/4/2021",
+    "PRICE": "$65.00",
+    "GRADE": "8.5",
+    "LOT #": "224442519012",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_vault",
+    "TYPE": "Auction",
+    "CERT": "47618418"
+  },
+  {
+    "DATE": "4/27/2021",
+    "PRICE": "$76.77",
+    "GRADE": "8.5",
+    "LOT #": "144011124924",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "47658460"
+  },
+  {
+    "DATE": "4/27/2021",
+    "PRICE": "$89.88",
+    "GRADE": "8.5",
+    "LOT #": "353459554423",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "47814667"
+  },
+  {
+    "DATE": "4/20/2021",
+    "PRICE": "$52.00",
+    "GRADE": "8.5",
+    "LOT #": "154412603349",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "mauriceo",
+    "TYPE": "Auction",
+    "CERT": "47887012"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "3/22/2022",
+    "PRICE": "$123.71",
+    "GRADE": "9",
+    "LOT #": "363763396106",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55298790"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$157.50",
+    "GRADE": "9",
+    "LOT #": "373936892665",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242715"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$149.19",
+    "GRADE": "9",
+    "LOT #": "373936893744",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242717"
+  },
+  {
+    "DATE": "1/31/2022",
+    "PRICE": "$131.55",
+    "GRADE": "9",
+    "LOT #": "284621780898",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "bcwcollectables",
+    "TYPE": "Auction",
+    "CERT": "52407356"
+  },
+  {
+    "DATE": "1/31/2022",
+    "PRICE": "$118.49",
+    "GRADE": "9",
+    "LOT #": "224805054024",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "soccerturismo",
+    "TYPE": "Auction",
+    "CERT": "54587392"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "12/19/2021",
+    "PRICE": "$425.00",
+    "GRADE": "10",
+    "LOT #": "403354308461",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "bye-ez-collectibles",
+    "TYPE": "Auction",
+    "CERT": "40768073"
+  },
+  {
+    "DATE": "10/10/2021",
+    "PRICE": "$518.74",
+    "GRADE": "10",
+    "LOT #": "224632546963",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "hunting_neo",
+    "TYPE": "Auction",
+    "CERT": "26459553"
+  },
+  {
+    "DATE": "9/14/2021",
+    "PRICE": "$460.25",
+    "GRADE": "10",
+    "LOT #": "384376761872",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "48565622"
+  },
+  {
+    "DATE": "8/21/2021",
+    "PRICE": "$500.00",
+    "GRADE": "10",
+    "LOT #": "274904320860",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tca_gaming",
+    "TYPE": "Auction",
+    "CERT": "49377304"
+  },
+  {
+    "DATE": "7/28/2021",
+    "PRICE": "$419.00",
+    "GRADE": "10",
+    "LOT #": "402997966313",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "48228764"
+  }
+]

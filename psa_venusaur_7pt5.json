@@ -1,0 +1,42 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "4/3/2021",
+    "PRICE": "$207.50",
+    "GRADE": "7.5",
+    "LOT #": "294091201185",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "hitpric",
+    "TYPE": "Auction",
+    "CERT": "48104691"
+  },
+  {
+    "DATE": "6/10/2020",
+    "PRICE": "$91.00",
+    "GRADE": "7.5",
+    "LOT #": "324188564020",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "thethreec*s",
+    "TYPE": "Auction",
+    "CERT": "45208211"
+  },
+  {
+    "DATE": "1/5/2020",
+    "PRICE": "$76.00",
+    "GRADE": "7.5",
+    "LOT #": "383352206426",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "brigil-12",
+    "TYPE": "Auction",
+    "CERT": "26300654"
+  }
+]

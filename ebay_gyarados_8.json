@@ -1,0 +1,51 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/154973096904?hash=item24151dcbc8:g:9GsAAOSw3yNibdGs><img src=https://i.ebayimg.com/thumbs/images/g/9GsAAOSw3yNibdGs/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pokemon Base Set Gyarados Holo 6/102 PSA 8 NM - MT",
+    "Current Bid Price": "$28.00",
+    "Number of Bids": "14 bids",
+    "Time Left on Auction": "3d 16h left (Saturday, 7PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/334425868424?hash=item4ddd55c888:g:sBgAAOSwMGZiXG~T><img src=https://i.ebayimg.com/thumbs/images/g/sBgAAOSwMGZiXG~T/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pokemon Base Set Gyarados Holo 6/102 CGC 8 (PSA)",
+    "Current Bid Price": "$40.00",
+    "Number of Bids": "0 bids\nor Best Offer",
+    "Time Left on Auction": "4d 12h left (Sunday, 2PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/354030333112?hash=item526dda2cb8:g:pagAAOSwMJ5iaJ20><img src=https://i.ebayimg.com/thumbs/images/g/pagAAOSwMJ5iaJ20/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "PSA 8 Gyarados Holo Rare #6 6/102 Pokemon Card Base Set WOTC English Mint",
+    "Current Bid Price": "$42.00",
+    "Number of Bids": "17 bids",
+    "Time Left on Auction": "1d 14h left (Thursday, 5PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/265675233908?hash=item3ddb7a5a74:g:DuYAAOSw1VBiYqnT><img src=https://i.ebayimg.com/thumbs/images/g/DuYAAOSw1VBiYqnT/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "NEW LISTING 1999 Pokemon Game Gyarados Holo Rare 6/102 PSA 8 NM-MT WoTC Base Set",
+    "Current Bid Price": "$49.99",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "6d 6h left (Tuesday, 9AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/195017768823?hash=item2d67f6ff77:g:7NkAAOSwKKxibg7c><img src=https://i.ebayimg.com/thumbs/images/g/7NkAAOSwKKxibg7c/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pokemon Card - PSA8 - Base Gyarados 6/102 Unlimited Holo Rare",
+    "Current Bid Price": "$40.04",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "4d 8h left (Sunday, 11AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/154976647434?hash=item241553f90a:g:dE4AAOSwTLZiV2PQ><img src=https://i.ebayimg.com/thumbs/images/g/dE4AAOSwTLZiV2PQ/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "NEW LISTING Pokemon Card PSA 8 NM/Mint Gyarados 1999 Base Set Ultra Star Rare Holo 6/102",
+    "Current Bid Price": "$53.94",
+    "Number of Bids": "10 bids",
+    "Time Left on Auction": "6d left (Tuesday, 2AM)"
+  }
+]

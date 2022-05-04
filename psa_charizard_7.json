@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/21/2022",
+    "PRICE": "$405.00",
+    "GRADE": "7",
+    "LOT #": "353906508310",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "vbrvin_yiroze",
+    "TYPE": "Auction",
+    "CERT": "42035773"
+  },
+  {
+    "DATE": "2/14/2022",
+    "PRICE": "$405.00",
+    "GRADE": "7",
+    "LOT #": "373918842783",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "52818515"
+  },
+  {
+    "DATE": "2/7/2022",
+    "PRICE": "$350.00",
+    "GRADE": "7",
+    "LOT #": "144389243696",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jnh_1",
+    "TYPE": "Auction",
+    "CERT": "63921632"
+  },
+  {
+    "DATE": "2/7/2022",
+    "PRICE": "$448.21",
+    "GRADE": "7",
+    "LOT #": "224811364748",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "nba_knight",
+    "TYPE": "Auction",
+    "CERT": "46830558"
+  },
+  {
+    "DATE": "2/3/2022",
+    "PRICE": "$346.00",
+    "GRADE": "7",
+    "LOT #": "125123525019",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dcsports87",
+    "TYPE": "Auction",
+    "CERT": "44795564"
+  }
+]

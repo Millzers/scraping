@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "9/30/2021",
+    "PRICE": "$66.00",
+    "GRADE": "8.5",
+    "LOT #": "154622245672",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pc_sportscards",
+    "TYPE": "Auction",
+    "CERT": "53616285"
+  },
+  {
+    "DATE": "7/11/2021",
+    "PRICE": "$81.00",
+    "GRADE": "8.5",
+    "LOT #": "313591825858",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokedash",
+    "TYPE": "Auction",
+    "CERT": "48952645"
+  },
+  {
+    "DATE": "1/6/2021",
+    "PRICE": "$59.00",
+    "GRADE": "8.5",
+    "LOT #": "184601265152",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "davl_da_i5yclrhop8",
+    "TYPE": "Auction",
+    "CERT": "45220029"
+  },
+  {
+    "DATE": "10/26/2020",
+    "PRICE": "$156.50",
+    "GRADE": "8.5",
+    "LOT #": "124398257908",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dcsports87",
+    "TYPE": "Auction",
+    "CERT": "48730106"
+  },
+  {
+    "DATE": "2/14/2020",
+    "PRICE": "$995.00",
+    "GRADE": "8.5",
+    "LOT #": "362622556487",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "ebirdman",
+    "TYPE": "Best Offer",
+    "CERT": "19581760"
+  }
+]

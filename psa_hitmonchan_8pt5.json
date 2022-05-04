@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "10/17/2021",
+    "PRICE": "$63.67",
+    "GRADE": "8.5",
+    "LOT #": "255181859786",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pilch60",
+    "TYPE": "Auction",
+    "CERT": "49377077"
+  },
+  {
+    "DATE": "8/31/2021",
+    "PRICE": "$20.00",
+    "GRADE": "8.5",
+    "LOT #": "353641350729",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "blackglovebox",
+    "TYPE": "Auction",
+    "CERT": "48303643"
+  },
+  {
+    "DATE": "8/29/2021",
+    "PRICE": "$73.00",
+    "GRADE": "8.5",
+    "LOT #": "133856738320",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "chicity_collect",
+    "TYPE": "Auction",
+    "CERT": "49590517"
+  },
+  {
+    "DATE": "8/22/2021",
+    "PRICE": "$29.98",
+    "GRADE": "8.5",
+    "LOT #": "165020212163",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "toddy42",
+    "TYPE": "Auction",
+    "CERT": "56939666"
+  },
+  {
+    "DATE": "4/9/2021",
+    "PRICE": "$68.50",
+    "GRADE": "8.5",
+    "LOT #": "164793717722",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "lakevill27",
+    "TYPE": "Auction",
+    "CERT": "47691098"
+  }
+]

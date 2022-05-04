@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/5/2022",
+    "PRICE": "$49.00",
+    "GRADE": "8",
+    "LOT #": "185273721326",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "neighborhood_pokestop",
+    "TYPE": "Auction",
+    "CERT": "54074083"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$46.00",
+    "GRADE": "8",
+    "LOT #": "175132948779",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "mitsuevo23",
+    "TYPE": "Auction",
+    "CERT": "54293898"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$48.00",
+    "GRADE": "8",
+    "LOT #": "175132948607",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "mitsuevo23",
+    "TYPE": "Auction",
+    "CERT": "54293897"
+  },
+  {
+    "DATE": "2/2/2022",
+    "PRICE": "$59.98",
+    "GRADE": "8",
+    "LOT #": "185273063844",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "gamesunleashed",
+    "TYPE": "Auction",
+    "CERT": "54920910"
+  },
+  {
+    "DATE": "2/2/2022",
+    "PRICE": "$41.79",
+    "GRADE": "8",
+    "LOT #": "203804652466",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "shtru-5769",
+    "TYPE": "Auction",
+    "CERT": "49390607"
+  }
+]

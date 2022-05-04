@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/23/2022",
+    "PRICE": "$325.00",
+    "GRADE": "10",
+    "LOT #": "363696922676",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dan3979",
+    "TYPE": "Auction",
+    "CERT": "52580249"
+  },
+  {
+    "DATE": "1/23/2022",
+    "PRICE": "$435.00",
+    "GRADE": "10",
+    "LOT #": "185260594202",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cwclevenger",
+    "TYPE": "Auction",
+    "CERT": "45907391"
+  },
+  {
+    "DATE": "12/16/2021",
+    "PRICE": "$405.00",
+    "GRADE": "10",
+    "LOT #": "234324788627",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "des1728",
+    "TYPE": "Auction",
+    "CERT": "43146490"
+  },
+  {
+    "DATE": "11/14/2021",
+    "PRICE": "$64.00",
+    "GRADE": "10",
+    "LOT #": "234274412600",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "californiatradingcards",
+    "TYPE": "Auction",
+    "CERT": "49007966"
+  },
+  {
+    "DATE": "11/14/2021",
+    "PRICE": "$376.75",
+    "GRADE": "10",
+    "LOT #": "234274405275",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "californiatradingcards",
+    "TYPE": "Auction",
+    "CERT": "49007966"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "12/16/2020",
+    "PRICE": "$42.00",
+    "GRADE": "7.5",
+    "LOT #": "293898711887",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tillys.collectibles",
+    "TYPE": "Best Offer",
+    "CERT": "45583244"
+  }
+]

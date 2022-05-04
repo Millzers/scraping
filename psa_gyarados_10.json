@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/23/2022",
+    "PRICE": "$561.00",
+    "GRADE": "10",
+    "LOT #": "185260601853",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cwclevenger",
+    "TYPE": "Auction",
+    "CERT": "52591108"
+  },
+  {
+    "DATE": "1/3/2022",
+    "PRICE": "$550.00",
+    "GRADE": "10",
+    "LOT #": "165253323038",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cheyners",
+    "TYPE": "Auction",
+    "CERT": "44869525"
+  },
+  {
+    "DATE": "12/31/2021",
+    "PRICE": "$586.07",
+    "GRADE": "10",
+    "LOT #": "185223231459",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "kgut098",
+    "TYPE": "Auction",
+    "CERT": "48846439"
+  },
+  {
+    "DATE": "11/20/2021",
+    "PRICE": "$680.00",
+    "GRADE": "10",
+    "LOT #": "144292214962",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "alsaf-96",
+    "TYPE": "Auction",
+    "CERT": "52422798"
+  },
+  {
+    "DATE": "11/15/2021",
+    "PRICE": "$670.00",
+    "GRADE": "10",
+    "LOT #": "144284444787",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "alsaf-96",
+    "TYPE": "Auction",
+    "CERT": "52422798"
+  }
+]

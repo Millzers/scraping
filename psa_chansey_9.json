@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$182.50",
+    "GRADE": "9",
+    "LOT #": "373936872115",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242689"
+  },
+  {
+    "DATE": "2/17/2022",
+    "PRICE": "$162.50",
+    "GRADE": "9",
+    "LOT #": "373924327659",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dragoon_pokemon",
+    "TYPE": "Auction",
+    "CERT": "53333276"
+  },
+  {
+    "DATE": "2/15/2022",
+    "PRICE": "$152.50",
+    "GRADE": "9",
+    "LOT #": "363718518161",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "50650802"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$186.50",
+    "GRADE": "9",
+    "LOT #": "185273067949",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "gamesunleashed",
+    "TYPE": "Auction",
+    "CERT": "54920908"
+  },
+  {
+    "DATE": "1/28/2022",
+    "PRICE": "$275.00",
+    "GRADE": "9",
+    "LOT #": "284617754493",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pernicious",
+    "TYPE": "Auction",
+    "CERT": "44424752"
+  }
+]

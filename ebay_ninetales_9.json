@@ -1,0 +1,23 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/144533311056?hash=item21a6db4e50:g:L9UAAOSwmslibxoe><img src=https://i.ebayimg.com/thumbs/images/g/L9UAAOSwmslibxoe/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pokemon Game Ninetales Holo 12/102 PSA 9 MINT",
+    "Current Bid Price": "$69.95",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "4d 16h left (Sunday, 6PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/195015052893?epid=21043375539&hash=item2d67cd8e5d:g:nyoAAOSwq~VibOEh><img src=https://i.ebayimg.com/thumbs/images/g/nyoAAOSwq~VibOEh/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pokemon Ninetales - Psa 9 Mint 12/102 - Unlimited - Rare",
+    "Current Bid Price": "$120.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "2d 23h left (Saturday, 2AM)"
+  }
+]

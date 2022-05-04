@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "11/22/2021",
+    "PRICE": "$58.00",
+    "GRADE": "8.5",
+    "LOT #": "284526845557",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "zandgemporium-0",
+    "TYPE": "Auction",
+    "CERT": "47782238"
+  },
+  {
+    "DATE": "10/18/2021",
+    "PRICE": "$71.01",
+    "GRADE": "8.5",
+    "LOT #": "224638389950",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "gymleadernick",
+    "TYPE": "Auction",
+    "CERT": "51651096"
+  },
+  {
+    "DATE": "7/28/2021",
+    "PRICE": "$67.00",
+    "GRADE": "8.5",
+    "LOT #": "402997960927",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "48635778"
+  },
+  {
+    "DATE": "5/11/2021",
+    "PRICE": "$73.00",
+    "GRADE": "8.5",
+    "LOT #": "353484814286",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tcgchampion",
+    "TYPE": "Auction",
+    "CERT": "49551327"
+  },
+  {
+    "DATE": "3/22/2021",
+    "PRICE": "$122.50",
+    "GRADE": "8.5",
+    "LOT #": "154373128261",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "ogtrain19",
+    "TYPE": "Auction",
+    "CERT": "52708059"
+  }
+]

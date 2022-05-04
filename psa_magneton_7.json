@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "3/22/2022",
+    "PRICE": "$21.50",
+    "GRADE": "7",
+    "LOT #": "384781017064",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242700"
+  },
+  {
+    "DATE": "3/22/2022",
+    "PRICE": "$21.51",
+    "GRADE": "7",
+    "LOT #": "363763392952",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55298694"
+  },
+  {
+    "DATE": "2/15/2022",
+    "PRICE": "$41.00",
+    "GRADE": "7",
+    "LOT #": "384716426162",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "54826726"
+  },
+  {
+    "DATE": "1/31/2022",
+    "PRICE": "$29.99",
+    "GRADE": "7",
+    "LOT #": "284620386176",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "zandgemporium-0",
+    "TYPE": "Auction",
+    "CERT": "52746345"
+  },
+  {
+    "DATE": "1/30/2022",
+    "PRICE": "$46.34",
+    "GRADE": "7",
+    "LOT #": "265501400368",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "collectorbirch",
+    "TYPE": "Auction",
+    "CERT": "52329179"
+  }
+]

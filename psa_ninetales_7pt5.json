@@ -1,0 +1,32 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "10/7/2017",
+    "PRICE": "$10.00",
+    "GRADE": "7.5",
+    "LOT #": "142516525057",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "hurl-dall",
+    "TYPE": "Buy It Now",
+    "CERT": "26616569"
+  },
+  {
+    "DATE": "5/22/2017",
+    "PRICE": "$12.00",
+    "GRADE": "7.5",
+    "LOT #": "222502343394",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "lostmachete",
+    "TYPE": "Buy It Now",
+    "CERT": "26616569"
+  }
+]

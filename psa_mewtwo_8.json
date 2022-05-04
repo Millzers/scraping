@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "3/22/2022",
+    "PRICE": "$36.99",
+    "GRADE": "8",
+    "LOT #": "373976445787",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "53031200"
+  },
+  {
+    "DATE": "2/24/2022",
+    "PRICE": "$73.00",
+    "GRADE": "8",
+    "LOT #": "363731057521",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "44656876"
+  },
+  {
+    "DATE": "2/21/2022",
+    "PRICE": "$17.50",
+    "GRADE": "8",
+    "LOT #": "134021232923",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "joelavi_4",
+    "TYPE": "Auction",
+    "CERT": "56482196"
+  },
+  {
+    "DATE": "2/18/2022",
+    "PRICE": "$57.00",
+    "GRADE": "8",
+    "LOT #": "353905862656",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tebasaki1973",
+    "TYPE": "Auction",
+    "CERT": "53920169"
+  },
+  {
+    "DATE": "2/11/2022",
+    "PRICE": "$56.00",
+    "GRADE": "8",
+    "LOT #": "384714667685",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "54197860"
+  }
+]

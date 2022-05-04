@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/23/2022",
+    "PRICE": "$690.00",
+    "GRADE": "10",
+    "LOT #": "185260605032",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cwclevenger",
+    "TYPE": "Auction",
+    "CERT": "50987473"
+  },
+  {
+    "DATE": "1/4/2022",
+    "PRICE": "$1,000.00",
+    "GRADE": "10",
+    "LOT #": "363670234510",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "49642592"
+  },
+  {
+    "DATE": "12/14/2021",
+    "PRICE": "$201.63",
+    "GRADE": "10",
+    "LOT #": "144317494985",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "slabcanskc",
+    "TYPE": "Auction",
+    "CERT": "48474376"
+  },
+  {
+    "DATE": "12/6/2021",
+    "PRICE": "$663.00",
+    "GRADE": "10",
+    "LOT #": "324912444804",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "slab-town",
+    "TYPE": "Auction",
+    "CERT": "53007809"
+  },
+  {
+    "DATE": "12/6/2021",
+    "PRICE": "$638.99",
+    "GRADE": "10",
+    "LOT #": "175044894793",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "instagram-poke.meew",
+    "TYPE": "Auction",
+    "CERT": "49014417"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/304468782737?epid=14043372147&hash=item46e3c0ee91:g:PaUAAOSwgctiLV8s><img src=https://i.ebayimg.com/thumbs/images/g/PaUAAOSwgctiLV8s/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pok\u00e9mon TCG Ninetales Base Set 12/102 Holo Unlimited Holo Rare CGC 8",
+    "Current Bid Price": "$30.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "3d 19h left (Saturday, 10PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/154977596563?hash=item2415627493:g:T~gAAOSwncliZtQM><img src=https://i.ebayimg.com/thumbs/images/g/T~gAAOSwncliZtQM/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "NEW LISTING 1999 Pokemon Ninetales Holo Base Set Unlimited 12/102 PSA 8 NM-MT",
+    "Current Bid Price": "$38.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "6d 10h left (Tuesday, 1PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/255515057832?hash=item3b7de25ea8:g:TkAAAOSwCp9iRQVX><img src=https://i.ebayimg.com/thumbs/images/g/TkAAAOSwCp9iRQVX/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pok\u00e9mon TCG Ninetales Holo base set 12/102 PSA8 NM-MT",
+    "Current Bid Price": "$100.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "3d 18h left (Saturday, 8PM)"
+  }
+]

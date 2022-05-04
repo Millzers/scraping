@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/10/2022",
+    "PRICE": "$51.00",
+    "GRADE": "8.5",
+    "LOT #": "165264176601",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "windycitypokemon",
+    "TYPE": "Auction",
+    "CERT": "49300931"
+  },
+  {
+    "DATE": "12/3/2021",
+    "PRICE": "$55.00",
+    "GRADE": "8.5",
+    "LOT #": "234309279643",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cerdz4sale",
+    "TYPE": "Auction",
+    "CERT": "53272847"
+  },
+  {
+    "DATE": "9/30/2021",
+    "PRICE": "$81.00",
+    "GRADE": "8.5",
+    "LOT #": "154622249147",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pc_sportscards",
+    "TYPE": "Auction",
+    "CERT": "53616282"
+  },
+  {
+    "DATE": "9/29/2021",
+    "PRICE": "$52.77",
+    "GRADE": "8.5",
+    "LOT #": "124914691309",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "zackattak103",
+    "TYPE": "Auction",
+    "CERT": "53272847"
+  },
+  {
+    "DATE": "7/11/2021",
+    "PRICE": "$76.00",
+    "GRADE": "8.5",
+    "LOT #": "144101476891",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "joeytcomplex",
+    "TYPE": "Auction",
+    "CERT": "48403964"
+  }
+]

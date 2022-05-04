@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "11/24/2021",
+    "PRICE": "$46.00",
+    "GRADE": "8.5",
+    "LOT #": "185168446576",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "flippinwotc",
+    "TYPE": "Auction",
+    "CERT": "48047183"
+  },
+  {
+    "DATE": "9/28/2021",
+    "PRICE": "$72.00",
+    "GRADE": "8.5",
+    "LOT #": "185056745865",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "flippinwotc",
+    "TYPE": "Auction",
+    "CERT": "48047184"
+  },
+  {
+    "DATE": "6/23/2021",
+    "PRICE": "$56.00",
+    "GRADE": "8.5",
+    "LOT #": "373616473123",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "sportcardauctionscom",
+    "TYPE": "Auction",
+    "CERT": "53129660"
+  },
+  {
+    "DATE": "3/29/2021",
+    "PRICE": "$100.00",
+    "GRADE": "8.5",
+    "LOT #": "164762785072",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "lakevill27",
+    "TYPE": "Best Offer",
+    "CERT": "47691099"
+  },
+  {
+    "DATE": "3/22/2021",
+    "PRICE": "$104.50",
+    "GRADE": "8.5",
+    "LOT #": "114734708413",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokevault8",
+    "TYPE": "Best Offer",
+    "CERT": "47739650"
+  }
+]

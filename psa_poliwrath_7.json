@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "4/5/2022",
+    "PRICE": "$27.00",
+    "GRADE": "7",
+    "LOT #": "363776768743",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "54149482"
+  },
+  {
+    "DATE": "1/30/2022",
+    "PRICE": "$26.00",
+    "GRADE": "7",
+    "LOT #": "154808450344",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jww_collectibles",
+    "TYPE": "Auction",
+    "CERT": "54019920"
+  },
+  {
+    "DATE": "1/27/2022",
+    "PRICE": "$34.50",
+    "GRADE": "7",
+    "LOT #": "373888820521",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dragoon_pokemon",
+    "TYPE": "Auction",
+    "CERT": "54289704"
+  },
+  {
+    "DATE": "1/27/2022",
+    "PRICE": "$30.01",
+    "GRADE": "7",
+    "LOT #": "373888818812",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dragoon_pokemon",
+    "TYPE": "Auction",
+    "CERT": "54289704"
+  },
+  {
+    "DATE": "1/25/2022",
+    "PRICE": "$24.50",
+    "GRADE": "7",
+    "LOT #": "144375435072",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "sportscard-trader",
+    "TYPE": "Auction",
+    "CERT": "47056191"
+  }
+]

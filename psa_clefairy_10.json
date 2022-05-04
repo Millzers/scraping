@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/23/2022",
+    "PRICE": "$810.00",
+    "GRADE": "10",
+    "LOT #": "185260598620",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "cwclevenger",
+    "TYPE": "Auction",
+    "CERT": "53033378"
+  },
+  {
+    "DATE": "11/1/2021",
+    "PRICE": "$710.00",
+    "GRADE": "10",
+    "LOT #": "384456995091",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "4_sharp_corners",
+    "TYPE": "Auction",
+    "CERT": "42816020"
+  },
+  {
+    "DATE": "10/30/2021",
+    "PRICE": "$970.00",
+    "GRADE": "10",
+    "LOT #": "284499116951",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "fadedgiants",
+    "TYPE": "Auction",
+    "CERT": "27269737"
+  },
+  {
+    "DATE": "9/23/2021",
+    "PRICE": "$823.00",
+    "GRADE": "10",
+    "LOT #": "384396910083",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "49642481"
+  },
+  {
+    "DATE": "4/27/2021",
+    "PRICE": "$770.00",
+    "GRADE": "10",
+    "LOT #": "353459550256",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "18778244"
+  }
+]

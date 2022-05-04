@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "11/15/2021",
+    "PRICE": "$360.00",
+    "GRADE": "7.5",
+    "LOT #": "133927994352",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dggamer",
+    "TYPE": "Auction",
+    "CERT": "48786357"
+  },
+  {
+    "DATE": "5/29/2021",
+    "PRICE": "$710.00",
+    "GRADE": "7.5",
+    "LOT #": "144043806004",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pwcc_auctions",
+    "TYPE": "Auction",
+    "CERT": "48366751"
+  },
+  {
+    "DATE": "3/14/2021",
+    "PRICE": "$499.99",
+    "GRADE": "7.5",
+    "LOT #": "133684980031",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "hollyg997",
+    "TYPE": "Auction",
+    "CERT": "47706363"
+  },
+  {
+    "DATE": "3/13/2021",
+    "PRICE": "$700.00",
+    "GRADE": "7.5",
+    "LOT #": "294058994435",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokebro290",
+    "TYPE": "Best Offer",
+    "CERT": "54004790"
+  },
+  {
+    "DATE": "3/7/2021",
+    "PRICE": "$655.00",
+    "GRADE": "7.5",
+    "LOT #": "303896630574",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "8bitwordsmith",
+    "TYPE": "Auction",
+    "CERT": "53921689"
+  }
+]

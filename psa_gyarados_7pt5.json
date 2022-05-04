@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "1/24/2022",
+    "PRICE": "$33.00",
+    "GRADE": "7.5",
+    "LOT #": "133992542711",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "fat-chocobo",
+    "TYPE": "Auction",
+    "CERT": "49531931"
+  },
+  {
+    "DATE": "5/4/2021",
+    "PRICE": "$67.00",
+    "GRADE": "7.5",
+    "LOT #": "154430066670",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "mauriceo",
+    "TYPE": "Auction",
+    "CERT": "47887038"
+  },
+  {
+    "DATE": "10/20/2017",
+    "PRICE": "$6.00",
+    "GRADE": "7.5",
+    "LOT #": "282693630775",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "philimanz_0",
+    "TYPE": "Auction",
+    "CERT": "26638010"
+  },
+  {
+    "DATE": "3/17/2017",
+    "PRICE": "$10.00",
+    "GRADE": "7.5",
+    "LOT #": "322447697162",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dylanewma_6",
+    "TYPE": "Auction",
+    "CERT": "26638010"
+  },
+  {
+    "DATE": "2/15/2017",
+    "PRICE": "$0.99",
+    "GRADE": "7.5",
+    "LOT #": "322417594578",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dylanewma_6",
+    "TYPE": "Auction",
+    "CERT": "26638010"
+  }
+]

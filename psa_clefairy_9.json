@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$103.53",
+    "GRADE": "9",
+    "LOT #": "363732364506",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242692"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$91.00",
+    "GRADE": "9",
+    "LOT #": "185273067951",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "gamesunleashed",
+    "TYPE": "Auction",
+    "CERT": "54920909"
+  },
+  {
+    "DATE": "1/15/2022",
+    "PRICE": "$99.99",
+    "GRADE": "9",
+    "LOT #": "353839969808",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "phuodan0",
+    "TYPE": "Auction",
+    "CERT": "50325528"
+  },
+  {
+    "DATE": "12/28/2021",
+    "PRICE": "$74.00",
+    "GRADE": "9",
+    "LOT #": "185222501307",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "mc_sportscards",
+    "TYPE": "Auction",
+    "CERT": "50547553"
+  },
+  {
+    "DATE": "12/18/2021",
+    "PRICE": "$66.00",
+    "GRADE": "9",
+    "LOT #": "255273389529",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "drig_wil",
+    "TYPE": "Auction",
+    "CERT": "20635612"
+  }
+]

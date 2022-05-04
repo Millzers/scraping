@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/18/2022",
+    "PRICE": "$24.50",
+    "GRADE": "7",
+    "LOT #": "353905856890",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "tebasaki1973",
+    "TYPE": "Auction",
+    "CERT": "53920165"
+  },
+  {
+    "DATE": "2/16/2022",
+    "PRICE": "$30.50",
+    "GRADE": "7",
+    "LOT #": "384727862902",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "jkcards123",
+    "TYPE": "Auction",
+    "CERT": "54264546"
+  },
+  {
+    "DATE": "2/15/2022",
+    "PRICE": "$32.00",
+    "GRADE": "7",
+    "LOT #": "185287240905",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "acclear",
+    "TYPE": "Auction",
+    "CERT": "54966402"
+  },
+  {
+    "DATE": "2/15/2022",
+    "PRICE": "$32.00",
+    "GRADE": "7",
+    "LOT #": "255379960420",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokepdx",
+    "TYPE": "Auction",
+    "CERT": "52561505"
+  },
+  {
+    "DATE": "1/31/2022",
+    "PRICE": "$42.00",
+    "GRADE": "7",
+    "LOT #": "353872812671",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "foster_cards",
+    "TYPE": "Auction",
+    "CERT": "51503811"
+  }
+]

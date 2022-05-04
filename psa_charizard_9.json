@@ -1,52 +1,62 @@
 [
   {
-    "DATE": "3/10/2019",
-    "PRICE": "$1,136.00",
-    "GRADE": "10",
-    "LOT #": "264219130361",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "jrrinehuls",
-    "TYPE": "Auction",
-    "CERT": "24732318"
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
   },
   {
-    "DATE": "8/29/2018",
-    "PRICE": "$1,526.01",
-    "GRADE": "10",
-    "LOT #": "142910572213",
+    "DATE": "4/8/2022",
+    "PRICE": "$1,025.00",
+    "GRADE": "9",
+    "LOT #": "165411927079",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "pwcc_auctions",
+    "AUCTION/SELLER": "moneylov1",
     "TYPE": "Auction",
-    "CERT": "41456048"
+    "CERT": "51402285"
   },
   {
-    "DATE": "8/7/2018",
-    "PRICE": "$1,211.00",
-    "GRADE": "10",
-    "LOT #": "273381933049",
+    "DATE": "4/5/2022",
+    "PRICE": "$1,226.05",
+    "GRADE": "9",
+    "LOT #": "363779895227",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "numismaticsgmc",
+    "AUCTION/SELLER": "probstein123",
     "TYPE": "Auction",
-    "CERT": "29002228"
+    "CERT": "43748308"
   },
   {
-    "DATE": "5/31/2018",
-    "PRICE": "$1,726.02",
-    "GRADE": "10",
-    "LOT #": "173336862789",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "the_charizard_master",
+    "DATE": "3/13/2022",
+    "PRICE": "$847.20",
+    "GRADE": "9",
+    "LOT #": "604",
+    "AUCTION HOUSE": "Lelands",
+    "AUCTION/SELLER": "Winter Classic 2022",
     "TYPE": "Auction",
-    "CERT": "40806559"
+    "CERT": "61207440"
   },
   {
-    "DATE": "5/6/2018",
-    "PRICE": "$2,250.00",
-    "GRADE": "10",
-    "LOT #": "132600514256",
+    "DATE": "2/18/2022",
+    "PRICE": "$549.99",
+    "GRADE": "9",
+    "LOT #": "353900494220",
     "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "sgpokecollect",
-    "TYPE": "Best Offer",
-    "CERT": "26561811"
+    "AUCTION/SELLER": "laubord-46",
+    "TYPE": "Auction",
+    "CERT": "10043392"
+  },
+  {
+    "DATE": "2/7/2022",
+    "PRICE": "$1,299.00",
+    "GRADE": "9",
+    "LOT #": "194778180291",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dwrmlr2005",
+    "TYPE": "Auction",
+    "CERT": "63208249"
   }
 ]

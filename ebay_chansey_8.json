@@ -1,0 +1,44 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/363825675198?epid=25043362788&hash=item54b5b33bbe:g:S5gAAOSw~bpicUwP><img src=https://i.ebayimg.com/thumbs/images/g/S5gAAOSw~bpicUwP/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "NEW LISTING Pok\u00e9mon TCG Chansey Base Set 3/102 Holo Unlimited PSA 8 \ud83d\udd25\ud83d\udd25",
+    "Current Bid Price": "$45.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "4d 21h left (Sunday, 10AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/144530047279?hash=item21a6a9812f:g:N54AAOSwuQBiNMAk><img src=https://i.ebayimg.com/thumbs/images/g/N54AAOSwuQBiNMAk/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pok\u00e9mon Game 3/102 Chansey Holo PSA 8 NM-MT",
+    "Current Bid Price": "$55.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "2d 22h left (Friday, 12PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/195021567270?hash=item2d6830f526:g:T14AAOSwNs9ib~IJ><img src=https://i.ebayimg.com/thumbs/images/g/T14AAOSwNs9ib~IJ/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "PSA 8! NEAR MINT-MINT 'CHANSEY - HOLO' Pokemon Game TCG WOTC Graded Card #3/102",
+    "Current Bid Price": "$58.36",
+    "Number of Bids": "0 bids\nor Best Offer",
+    "Time Left on Auction": "5d 20h left (Monday, 10AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/195017764387?hash=item2d67f6ee23:g:SGAAAOSwhcRibg0x><img src=https://i.ebayimg.com/thumbs/images/g/SGAAAOSwhcRibg0x/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pokemon Card - PSA8 - Base Chansey 3/102 Unlimited Holo Rare",
+    "Current Bid Price": "$37.56",
+    "Number of Bids": "4 bids",
+    "Time Left on Auction": "4d 21h left (Sunday, 11AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/165461264473?hash=item2686428859:g:gr8AAOSwQlJiB~pZ><img src=https://i.ebayimg.com/thumbs/images/g/gr8AAOSwQlJiB~pZ/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 POKEMON BASE UNLIMITED CHANSEY HOLO PSA 8 NM-MINT 3/102",
+    "Current Bid Price": "$62.99",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "4d 7h left (Saturday, 9PM)"
+  }
+]

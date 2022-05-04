@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "10/18/2021",
+    "PRICE": "$33.00",
+    "GRADE": "8.5",
+    "LOT #": "224638392356",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "gymleadernick",
+    "TYPE": "Auction",
+    "CERT": "51651107"
+  },
+  {
+    "DATE": "3/31/2021",
+    "PRICE": "$70.00",
+    "GRADE": "8.5",
+    "LOT #": "274731445049",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "damexicanhipstrsmons",
+    "TYPE": "Best Offer",
+    "CERT": "44471353"
+  },
+  {
+    "DATE": "11/2/2020",
+    "PRICE": "$58.00",
+    "GRADE": "8.5",
+    "LOT #": "402514186106",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "dompia_29",
+    "TYPE": "Auction",
+    "CERT": "25981634"
+  },
+  {
+    "DATE": "7/2/2020",
+    "PRICE": "$31.35",
+    "GRADE": "8.5",
+    "LOT #": "383604966429",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "44443698"
+  },
+  {
+    "DATE": "6/19/2020",
+    "PRICE": "$41.69",
+    "GRADE": "8.5",
+    "LOT #": "373080189852",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "45332012"
+  }
+]
