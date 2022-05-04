@@ -1,0 +1,62 @@
+[
+  {
+    "Date": "Date",
+    "Price": "Price",
+    "Grade": "Grade",
+    "Lot #": "Lot #",
+    "Auction House": "Auction House",
+    "Seller": "Seller",
+    "Type": "Type",
+    "Cert": "Cert"
+  },
+  {
+    "DATE": "2/25/2022",
+    "PRICE": "$103.53",
+    "GRADE": "9",
+    "LOT #": "373936894591",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "55242720"
+  },
+  {
+    "DATE": "2/11/2022",
+    "PRICE": "$96.00",
+    "GRADE": "9",
+    "LOT #": "384714711101",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "probstein123",
+    "TYPE": "Auction",
+    "CERT": "50650831"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$194.64",
+    "GRADE": "9",
+    "LOT #": "125122977276",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "zeakscards",
+    "TYPE": "Auction",
+    "CERT": "52370835"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$141.00",
+    "GRADE": "9",
+    "LOT #": "255356765350",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "zacharcoone-0",
+    "TYPE": "Auction",
+    "CERT": "44027268"
+  },
+  {
+    "DATE": "2/4/2022",
+    "PRICE": "$64.00",
+    "GRADE": "9",
+    "LOT #": "294775600426",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "pokepul",
+    "TYPE": "Auction",
+    "CERT": "43223283"
+  }
+]

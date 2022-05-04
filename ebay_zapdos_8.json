@@ -1,0 +1,37 @@
+[
+  {
+    "Auction URL": "Auction Image",
+    "Auction Title": "Auction Title",
+    "Current Bid Price": "Current Bid Price",
+    "Number of Bids": "Number of Bids",
+    "Time Left on Auction": "Time Left on Auction"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/203934409227?hash=item2f7b70220b:g:x5oAAOSwrhJiK5tK><img src=https://i.ebayimg.com/thumbs/images/g/x5oAAOSwrhJiK5tK/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pokemon Map Zapdos 16/102 Base Set EN English Holo PSA 8",
+    "Current Bid Price": "$3.69",
+    "Number of Bids": "5 bids",
+    "Time Left on Auction": "5d 23h left (Tuesday, 1PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/175256154055?hash=item28ce14afc7:g:Wi0AAOSwwERiWQ~Z><img src=https://i.ebayimg.com/thumbs/images/g/Wi0AAOSwwERiWQ~Z/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pokemon Base Set Holo Zapdos 16/102 - PSA 8 - NM/MT",
+    "Current Bid Price": "$55.00",
+    "Number of Bids": "0 bids",
+    "Time Left on Auction": "11h left (Thursday, 1AM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/234534526755?hash=item369b58df23:g:oMUAAOSwbtxiZar-><img src=https://i.ebayimg.com/thumbs/images/g/oMUAAOSwbtxiZar-/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "1999 Pokemon Game Zapdos Holo #16/102 PSA 8 NM-MT Base Set Unlimited",
+    "Current Bid Price": "$179.99",
+    "Number of Bids": "0 bids\nor Best Offer",
+    "Time Left on Auction": "4d left (Sunday, 2PM)"
+  },
+  {
+    "Auction URL": "<a href=https://www.ebay.com/itm/224963727547?hash=item3460e210bb:g:eYoAAOSwIaBht8B4><img src=https://i.ebayimg.com/thumbs/images/g/eYoAAOSwIaBht8B4/s-l225.jpg alt=\"HTML tutorial\" style=\"width:148px;height:225px;\"></a>",
+    "Auction Title": "Pok\u00e9mon Zapdos 16/102 Base Set Holo Rare PSA 8 NM/MINT TCG WoTC 1999 Card Game",
+    "Current Bid Price": "$200.00",
+    "Number of Bids": "0 bids\nor Best Offer",
+    "Time Left on Auction": "2d 8h left (Friday, 10PM)"
+  }
+]
