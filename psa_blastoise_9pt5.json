@@ -10,6 +10,16 @@
     "Cert": "Cert"
   },
   {
+    "DATE": "5/4/2022",
+    "PRICE": "$90.75",
+    "GRADE": "8",
+    "LOT #": "294963403526",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "peteysworld",
+    "TYPE": "Auction",
+    "CERT": "64368721"
+  },
+  {
     "DATE": "4/5/2022",
     "PRICE": "$430.00",
     "GRADE": "9",
@@ -48,15 +58,5 @@
     "AUCTION/SELLER": "anderson_capital",
     "TYPE": "Auction",
     "CERT": "54614109"
-  },
-  {
-    "DATE": "2/15/2022",
-    "PRICE": "$44.00",
-    "GRADE": "2",
-    "LOT #": "373920247015",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "probstein123",
-    "TYPE": "Auction",
-    "CERT": "59376235"
   }
 ]

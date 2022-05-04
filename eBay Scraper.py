@@ -59,9 +59,12 @@ def getMarketPrice(url):  # scrape psa website for the table
     driver.get(url)
 
     try:
-        elem = WebDriverWait(driver, 30).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#itemResults"))
-        )
+        WebDriverWait(driver, 30).until(
+            EC.presence_of_element_located((By.TAG_NAME, "td")))
+        WebDriverWait(driver, 30).until(
+            EC.presence_of_element_located((By.TAG_NAME, "th")))
+        WebDriverWait(driver, 30).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "#itemResults")))
     except: print("Driver Timed Out.")
 
     table = driver.find_elements(by=By.CSS_SELECTOR, value="#itemResults")[0]
@@ -2317,7 +2320,7 @@ def hitmonchan_10():
     psa_file = "psa_hitmonchan_10.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_10.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"10"&_in_kw=1&_ex_kw=celebrations+1st+9+9.5+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"10"&_in_kw=1&_ex_kw=celebrations+1st+9+9.5+8.5+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=10'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2369,7 +2372,7 @@ def hitmonchan_9pt5():
     psa_file = "psa_hitmonchan_9pt5.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_9pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+9+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+9+10+8.5+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=9.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2421,7 +2424,7 @@ def hitmonchan_9():
     psa_file = "psa_hitmonchan_9.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_9.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=9'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2473,7 +2476,7 @@ def hitmonchan_8pt5():
     psa_file = "psa_hitmonchan_8pt5.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_8pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=8.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2577,7 +2580,7 @@ def hitmonchan_7pt5():
     psa_file = "psa_hitmonchan_7pt5.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_7pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=7.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2629,7 +2632,7 @@ def hitmonchan_7():
     psa_file = "psa_hitmonchan_7.json"  # json file name that will contain psa data
     price_file = 'prices_hitmonchan_7.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="hitmonchan"+"7%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544033#g=7'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2682,7 +2685,7 @@ def magneton_10():
     psa_file = "psa_magneton_10.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_10.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"10"&_in_kw=1&_ex_kw=celebrations+1st+9+9.5+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"10"&_in_kw=1&_ex_kw=celebrations+1st+9.5+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=10'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2734,7 +2737,7 @@ def magneton_9pt5():
     psa_file = "psa_magneton_9pt5.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_9pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+9+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=9.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2838,7 +2841,7 @@ def magneton_8pt5():
     psa_file = "psa_magneton_8pt5.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_8pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=8.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2890,7 +2893,7 @@ def magneton_8():
     psa_file = "psa_magneton_8.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_8.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=8'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2942,7 +2945,7 @@ def magneton_7pt5():
     psa_file = "psa_magneton_7pt5.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_7pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=7.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -2994,7 +2997,7 @@ def magneton_7():
     psa_file = "psa_magneton_7.json"  # json file name that will contain psa data
     price_file = 'prices_magneton_7.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="magneton"+"9%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544037#g=7'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3099,7 +3102,7 @@ def mewtwo_9pt5():
     psa_file = "psa_mewtwo_9pt5.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_9pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+9+10+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"9.5"&_in_kw=1&_ex_kw=celebrations+1st+9+8.5+8+7.5+7+lot+anniversary+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=9.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3151,7 +3154,7 @@ def mewtwo_9():
     psa_file = "psa_mewtwo_9.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_9.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+8.5+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=9'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3203,7 +3206,7 @@ def mewtwo_8pt5():
     psa_file = "psa_mewtwo_8pt5.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_8pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=8.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3255,7 +3258,7 @@ def mewtwo_8():
     psa_file = "psa_mewtwo_8.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_8.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+9+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=8'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3307,7 +3310,7 @@ def mewtwo_7pt5():
     psa_file = "psa_mewtwo_7pt5.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_7pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=7.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -3359,7 +3362,7 @@ def mewtwo_7():
     psa_file = "psa_mewtwo_7.json"  # json file name that will contain psa data
     price_file = 'prices_mewtwo_7.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="mewtwo"+"10%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544039#g=7'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -4976,7 +4979,7 @@ def venusaur_9():
     psa_file = "psa_venusaur_9.json"  # json file name that will contain psa data
     price_file = 'prices_venusaur_9.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"9"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+8.5+8+7.5+7+lot+anniversary+blastoise+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544049#g=9'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5028,7 +5031,7 @@ def venusaur_8pt5():
     psa_file = "psa_venusaur_8pt5.json"  # json file name that will contain psa data
     price_file = 'prices_venusaur_8pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"8.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8+7.5+7+lot+anniversary+blastoise+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544049#g=8.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5080,7 +5083,7 @@ def venusaur_8():
     psa_file = "psa_venusaur_8.json"  # json file name that will contain psa data
     price_file = 'prices_venusaur_8.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7.5+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"8"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+7.5+7+if+lot+anniversary+blastoise+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544049#g=8'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5132,7 +5135,7 @@ def venusaur_7pt5():
     psa_file = "psa_venusaur_7pt5.json"  # json file name that will contain psa data
     price_file = 'prices_venusaur_7pt5.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"7.5"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7+if+lot+anniversary+blastoise+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544049#g=7.5'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5184,7 +5187,7 @@ def venusaur_7():
     psa_file = "psa_venusaur_7.json"  # json file name that will contain psa data
     price_file = 'prices_venusaur_7.json'
     # url for eBay auction
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+venusaur+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="venusaur"+"15%2F102"++"7"&_in_kw=1&_ex_kw=celebrations+1st+9.5+10+9+8.5+8+7.5+if+lot+anniversary+blastoise+shadowless+gold+reverse+service+reprint+other&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544049#g=7'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5595,117 +5598,117 @@ def zapdos_7():
     convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
-# blastoise_10()
-# blastoise_9pt5()
-# blastoise_9()
-# blastoise_8pt5()
-# blastoise_8()
-# blastoise_7pt5()
-# blastoise_7()
-#
-# alakazam_10()
-# alakazam_9pt5()
-# alakazam_9()
-# alakazam_8pt5()
-# alakazam_8()
-# alakazam_7pt5()
-# alakazam_7()
+blastoise_10()
+blastoise_9pt5()
+blastoise_9()
+blastoise_8pt5()
+blastoise_8()
+blastoise_7pt5()
+blastoise_7()
 
-# chansey_10()
-# chansey_9pt5()
-# chansey_9()
-# chansey_8pt5()
-# chansey_8()
-# chansey_7pt5()
-# chansey_7()
+alakazam_10()
+alakazam_9pt5()
+alakazam_9()
+alakazam_8pt5()
+alakazam_8()
+alakazam_7pt5()
+alakazam_7()
 
-# charizard_10()
-# charizard_9pt5()
-# charizard_9()
-# charizard_8pt5()
-# charizard_8()
-# charizard_7pt5()
-# charizard_7()
+chansey_10()
+chansey_9pt5()
+chansey_9()
+chansey_8pt5()
+chansey_8()
+chansey_7pt5()
+chansey_7()
 
-# clefairy_10()
-# clefairy_9pt5()
-# clefairy_9()
-# clefairy_8pt5()
-# clefairy_8()
-# clefairy_7pt5()
-# clefairy_7()
+charizard_10()
+charizard_9pt5()
+charizard_9()
+charizard_8pt5()
+charizard_8()
+charizard_7pt5()
+charizard_7()
 
-# gyarados_10()
-# gyarados_9pt5()
-# gyarados_9()
-# gyarados_8pt5()
-# gyarados_8()
-# gyarados_7pt5()
-# gyarados_7()
-#
-# hitmonchan_10()
-# hitmonchan_9pt5()
-# hitmonchan_9()
-# hitmonchan_8pt5()
-# hitmonchan_8()
-# hitmonchan_7pt5()
-# hitmonchan_7()
-#
-# magneton_10()
-# magneton_9pt5()
-# magneton_9()
-# magneton_8pt5()
-# magneton_8()
-# magneton_7pt5()
-# magneton_7()
-#
-# mewtwo_10()
-# mewtwo_9pt5()
-# mewtwo_9()
-# mewtwo_8pt5()
-# mewtwo_8()
-# mewtwo_7pt5()
-# mewtwo_7()
-#
-# nidoking_10()
-# nidoking_9pt5()
-# nidoking_9()
-# nidoking_8pt5()
-# nidoking_8()
-# nidoking_7pt5()
-# nidoking_7()
-#
-# ninetales_10()
-# ninetales_9pt5()
-# ninetales_9()
-# ninetales_8pt5()
-# ninetales_8()
-# ninetales_7pt5()
-# ninetales_7()
-#
-# poliwrath_10()
-# poliwrath_9pt5()
-# poliwrath_9()
-# poliwrath_8pt5()
-# poliwrath_8()
-# poliwrath_7pt5()
-# poliwrath_7()
-#
-# raichu_10()
-# raichu_9pt5()
-# raichu_9()
-# raichu_8pt5()
-# raichu_8()
-# raichu_7pt5()
-# raichu_7()
-#
-# venusaur_10()
-# venusaur_9pt5()
-# venusaur_9()
-# venusaur_8pt5()
-# venusaur_8()
-# venusaur_7pt5()
-# venusaur_7()
+clefairy_10()
+clefairy_9pt5()
+clefairy_9()
+clefairy_8pt5()
+clefairy_8()
+clefairy_7pt5()
+clefairy_7()
+
+gyarados_10()
+gyarados_9pt5()
+gyarados_9()
+gyarados_8pt5()
+gyarados_8()
+gyarados_7pt5()
+gyarados_7()
+
+hitmonchan_10()
+hitmonchan_9pt5()
+hitmonchan_9()
+hitmonchan_8pt5()
+hitmonchan_8()
+hitmonchan_7pt5()
+hitmonchan_7()
+
+magneton_10()
+magneton_9pt5()
+magneton_9()
+magneton_8pt5()
+magneton_8()
+magneton_7pt5()
+magneton_7()
+
+mewtwo_10()
+mewtwo_9pt5()
+mewtwo_9()
+mewtwo_8pt5()
+mewtwo_8()
+mewtwo_7pt5()
+mewtwo_7()
+
+nidoking_10()
+nidoking_9pt5()
+nidoking_9()
+nidoking_8pt5()
+nidoking_8()
+nidoking_7pt5()
+nidoking_7()
+
+ninetales_10()
+ninetales_9pt5()
+ninetales_9()
+ninetales_8pt5()
+ninetales_8()
+ninetales_7pt5()
+ninetales_7()
+
+poliwrath_10()
+poliwrath_9pt5()
+poliwrath_9()
+poliwrath_8pt5()
+poliwrath_8()
+poliwrath_7pt5()
+poliwrath_7()
+
+raichu_10()
+raichu_9pt5()
+raichu_9()
+raichu_8pt5()
+raichu_8()
+raichu_7pt5()
+raichu_7()
+
+venusaur_10()
+venusaur_9pt5()
+venusaur_9()
+venusaur_8pt5()
+venusaur_8()
+venusaur_7pt5()
+venusaur_7()
 
 zapdos_10()
 zapdos_9pt5()

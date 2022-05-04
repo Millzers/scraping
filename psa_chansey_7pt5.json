@@ -10,6 +10,16 @@
     "Cert": "Cert"
   },
   {
+    "DATE": "5/4/2022",
+    "PRICE": "$18.99",
+    "GRADE": "6",
+    "LOT #": "224958494842",
+    "AUCTION HOUSE": "eBay",
+    "AUCTION/SELLER": "livealifeulove",
+    "TYPE": "Auction",
+    "CERT": "54353444"
+  },
+  {
     "DATE": "3/22/2022",
     "PRICE": "$43.85",
     "GRADE": "8",
@@ -48,15 +58,5 @@
     "AUCTION/SELLER": "probstein123",
     "TYPE": "Auction",
     "CERT": "55242687"
-  },
-  {
-    "DATE": "2/25/2022",
-    "PRICE": "$182.50",
-    "GRADE": "9",
-    "LOT #": "373936872115",
-    "AUCTION HOUSE": "eBay",
-    "AUCTION/SELLER": "probstein123",
-    "TYPE": "Auction",
-    "CERT": "55242689"
   }
 ]
