@@ -127,7 +127,7 @@ def alakazam_10():
     price_file = "prices_alakazam_10.json"  # json file name that will contain price data ########################
     # url for eBay auction
     #### TEST URL #####
-    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"7"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
+    url = 'https://www.ebay.com/sch/CCG-Individual-Cards/183454/i.html?_from=R40&_nkw="alakazam"+"1%2F102"+"10"&_in_kw=1&_ex_kw=1st%2C+shadowless%2C&_sacat=183454&_udlo=&_udhi=&LH_Auction=1&_ftrt=901&_ftrv=1&_sabdlo=&_sabdhi=&_samilow=&_samihi=&_sadis=15&_stpos=32413&_sargn=-1%26saslc%3D1&_salic=1&_sop=15&_dmd=1&_ipg=60&_fosrp=1'
     psa_url = 'https://www.psacard.com/auctionprices/tcg-cards/1999-pokemon-game/alakazam-holo/values/544021#g=10'  # url for PSA website
 
     driver = webdriver.Chrome(ChromeDriverManager().install())  # open up a chrome application for selenium to use
@@ -5598,13 +5598,13 @@ def zapdos_7():
     convert_to_json(price_results, price_file)  # get the avg price and create a fair, good, and great price.
 
 
-blastoise_10()
-blastoise_9pt5()
-blastoise_9()
-blastoise_8pt5()
-blastoise_8()
-blastoise_7pt5()
-blastoise_7()
+# blastoise_10()
+# blastoise_9pt5()
+# blastoise_9()
+# blastoise_8pt5()
+# blastoise_8()
+# blastoise_7pt5()
+# blastoise_7()
 
 alakazam_10()
 alakazam_9pt5()
